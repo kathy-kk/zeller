@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import UserTypeOptions from './components/userTypeOptions'
+import { ADMIN, MANAGER } from './types/userType'
+
 
 function App() {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  let options = [ADMIN, MANAGER]
+  const handleSelectChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+     event.persist()
+      setSelectedIndex(options.indexOf(event.target.value))
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <UserTypeOptions handleSelectChange = {handleSelectChange} selectedIndex={selectedIndex} options={options}/>
     </div>
   );
 }
