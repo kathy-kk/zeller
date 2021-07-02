@@ -11,7 +11,7 @@ const UserTypeOptionsAction = (props: UserTypeOptions) => {
   const { options, selectedIndex, handleSelectChange } = props
   return (<Wrapper>
           {options.map((option, index) => 
-              <Item>
+              <Item key={index}>
               <RadioButton 
                key = {index}
                className={options[index].toLocaleLowerCase()}

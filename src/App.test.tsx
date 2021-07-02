@@ -3,7 +3,7 @@ import { MockedProvider } from '@apollo/client/testing';
 import App from './App';
 import testData from './testData.json'
 import { ListZellerCustomersQuery } from './query/query'
-import {render, screen} from '@testing-library/react'
+import {render, screen, waitFor} from '@testing-library/react'
 
 const mocks = [
   {
@@ -15,8 +15,6 @@ const mocks = [
     }
   }
 ]
-
-const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 it('renders admin and manager radio buttons with default selected as admin', async() => {
  render(
@@ -66,7 +64,7 @@ it('renders empty list if query fails', async () => {
       <App />
       </MockedProvider>);
   
-  await wait(0);
+  await waitFor(() => {});
   const list = screen.getByRole('list')
   expect(list.childNodes).toHaveLength(0)
 })
@@ -85,7 +83,7 @@ it('renders empty list if data is not in the right format', async () => {
       <App />
       </MockedProvider>);
     
-    await wait(0);
+    await waitFor(() => {});
     const list = screen.getByRole('list')
     expect(list.childNodes).toHaveLength(0)
 })
@@ -96,7 +94,7 @@ it('renders list of selected role', async() => {
     <App />
     </MockedProvider>);
   
-  await wait(0);
+  await waitFor(() => {});
   const list = screen.getByRole('list')
   expect(list.childNodes).toHaveLength(3)
 
