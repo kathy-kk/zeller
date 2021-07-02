@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloProvider } from '@apollo/client';
+import client from './config/clientConfig'
+import { ConfigProvider } from 'react-avatar'
+
 
 ReactDOM.render(
+  <ApolloProvider client={client}>
   <React.StrictMode>
+  <ConfigProvider colors={['red', 'green', 'blue']}>
     <App />
-  </React.StrictMode>,
+    </ConfigProvider>
+  </React.StrictMode>
+  </ApolloProvider>
+  ,
   document.getElementById('root')
 );
 

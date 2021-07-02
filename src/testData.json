@@ -1,0 +1,50 @@
+{
+    "data": {
+      "listZellerCustomers": {
+        "items": [
+          {
+            "email": "john@zeller.com",
+            "id": "545eba38-680c-4b7b-9250-3f514146f81a",
+            "name": "John Smith",
+            "role": "Admin"
+          },
+          {
+            "email": "nathan@zeller.com",
+            "id": "947a7361-c3ea-4c62-a8c4-649460fc6fcd",
+            "name": "Nathan Smith",
+            "role": "Manager"
+          },
+          {
+            "email": "glen@zeller.com",
+            "id": "066cf6cd-0856-4d9b-98b8-6428bb219239",
+            "name": "Glen Tailor",
+            "role": "Manager"
+          },
+          {
+            "email": "adam@zeller.com",
+            "id": "31a79cd8-4e1d-4e02-ab33-6781f100110c",
+            "name": "Adam Muller",
+            "role": "Admin"
+          },
+          {
+            "email": "joe@zeller.com",
+            "id": "21d2e92f-650d-4438-a3c9-13e236088787",
+            "name": "Joe Tailor",
+            "role": "Manager"
+          },
+          {
+            "email": "perry@zeller.com",
+            "id": "33dff7db-98ea-45e1-b99e-e642f1a6451c",
+            "name": "Peri Smith",
+            "role": "Admin"
+          },
+          {
+            "email": "chris@zeller.com",
+            "id": "98d21ad3-aa8c-4412-8d12-3b91dd7f0b66",
+            "name": "Chris Su",
+            "role": "Manager"
+          }
+        ]
+      }
+    }
+  }

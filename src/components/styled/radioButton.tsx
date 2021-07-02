@@ -11,6 +11,20 @@ export const RadioButtonLabel = styled.label`
   border: 1px solid #bebebe;
 `;
 
+export const Wrapper = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 0px 16px 24px 16px;
+  box-sizing: border-box;
+`;
+
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+  height: 48px;
+  position: relative;
+`;
+
 const RadioButton = styled.input`
   opacity: 0;
   z-index: 1;

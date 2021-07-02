@@ -1,6 +1,5 @@
 import React from 'react'
-import RadioButton, { RadioButtonLabel } from './styled/radioButton'
-import { Wrapper, Item } from './styled/wrapper'
+import RadioButton, { RadioButtonLabel, Wrapper, Item } from './styled/radioButton'
 
 interface UserTypeOptions {
     options: Array<string>,
