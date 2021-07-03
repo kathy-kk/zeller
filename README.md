@@ -1,14 +1,14 @@
 # Technology and Methodology
   - Create React App
-   - setup environment
+    - setup environment
   - React
-   - useState for state management.
-     render component
+    - useState for state management.
+      render component
   - Typescript
   - Apollo Client 
-   - useQuery for data
+    - useQuery for data
   - TDD
-   - Jest, reat-testing-library
+    - Jest, reat-testing-library
 
 # Design
  - App Layer
