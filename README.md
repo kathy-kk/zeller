@@ -1,31 +1,31 @@
 # Technology and Methodology
-  ## Create React App
+  - Create React App
    - setup environment
-  ## React
+  - React
    - useState for state management.
      render component
-  ## Typescript
-  ## Apollo Client 
+  - Typescript
+  - Apollo Client 
    - useQuery for data
-  ## TDD
+  - TDD
    - Jest, reat-testing-library
 
 # Design
- ## App Layer
+ - App Layer
    - Act as a control plane
- ## UI 
+ - UI 
    - Pure React components and React styled components
- ## Integration
+ - Integration
    - Data integration with Apollo Client
 
 # Usage
- ## development 
+ - development 
    - npm run start
- ## build
+ - build
    - npm run build
- ## test 
+ - test 
    - npm run test
- ## coverage
+ - coverage
    - npm run test:coverage
 
 
