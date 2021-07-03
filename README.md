@@ -19,6 +19,8 @@
    - Data integration with Apollo Client
 
 # Usage
+ - install
+   - npm install
  - development 
    - npm run start
  - build
