@@ -64,9 +64,10 @@ it('renders empty list if query fails', async () => {
       <App />
       </MockedProvider>);
   
-  await waitFor(() => {});
-  const list = screen.getByRole('list')
-  expect(list.childNodes).toHaveLength(0)
+  await waitFor(() => {
+    const list = screen.getByRole('list')
+    expect(list.childNodes).toHaveLength(0)
+  });
 })
 
 it('renders empty list if data is not in the right format', async () => {
@@ -83,9 +84,10 @@ it('renders empty list if data is not in the right format', async () => {
       <App />
       </MockedProvider>);
     
-    await waitFor(() => {});
-    const list = screen.getByRole('list')
-    expect(list.childNodes).toHaveLength(0)
+    await waitFor(() => {
+      const list = screen.getByRole('list')
+      expect(list.childNodes).toHaveLength(0)
+    });
 })
 
 it('renders list of selected role', async() => {
@@ -94,13 +96,14 @@ it('renders list of selected role', async() => {
     <App />
     </MockedProvider>);
   
-  await waitFor(() => {});
-  const list = screen.getByRole('list')
-  expect(list.childNodes).toHaveLength(3)
-
-  const buttons = screen.getAllByRole('radio')
-  const managerRadioButon = buttons[1] as HTMLInputElement
-  managerRadioButon.click()
-  expect(list.childNodes).toHaveLength(4)
+  await waitFor(() => {
+    const list = screen.getByRole('list')
+    expect(list.childNodes).toHaveLength(3)
+  
+    const buttons = screen.getAllByRole('radio')
+    const managerRadioButon = buttons[1] as HTMLInputElement
+    managerRadioButon.click()
+    expect(list.childNodes).toHaveLength(4)
+  });
 })
 
