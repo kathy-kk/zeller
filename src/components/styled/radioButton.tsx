@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 
+export const blue1 = '#cce0ff'
+export const blue2 = '#4d79ff'
+
+// Grays
+export const gray1 = '#383737';
+export const gray2 = '#565555';
+
+export const ContainerTitle = styled.div`
+font-size: 20px;
+color: ${gray1};
+padding-left:15px;
+padding-top:20px;
+margin-bottom: 5px;
+`
+
 export const RadioButtonLabel = styled.label`
   position: absolute;
   top: 25%;
@@ -18,11 +33,17 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
 `;
 
+interface ItemProps{
+  checked: Boolean
+}
+
 export const Item = styled.div`
   display: flex;
   align-items: center;
   height: 48px;
   position: relative;
+  border-radius:5px;
+  background: ${(props: ItemProps) => props.checked? blue1: 'white'}
 `;
 
 const RadioButton = styled.input`
@@ -48,8 +69,8 @@ const RadioButton = styled.input`
     props.checked &&
     ` 
     &:checked + ${RadioButtonLabel} {
-      background: #db7290;
-      border: 1px solid #db7290;
+      background: white;
+      border: 1px solid ${blue2};
       &::after {
         content: "";
         display: block;
@@ -58,7 +79,7 @@ const RadioButton = styled.input`
         height: 12px;
         margin: 6px;
         box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
-        background: white;
+        background: ${blue2};
       }
     }
   `}

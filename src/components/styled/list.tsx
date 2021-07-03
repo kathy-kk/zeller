@@ -1,15 +1,13 @@
 import styled from 'styled-components'
 
-// Grays
-export const gray1 = "#383737";
-export const gray2 = "#565555";
-export const gray3 = "#857c81";
-export const gray4 = "#b9b9b9";
-export const gray5 = "#e0dddd";
+//Blues
+export const blue1 = '#cce0ff'
+export const blue2 = '#4d79ff'
 
-// Colors
-export const primary1 = "#6ca583";
-export const accent1 = "#9b8dab";
+// Grays
+export const gray1 = '#383737';
+export const gray2 = '#565555';
+
 
 // Fonts
 export const fontFamily = "'Segoe UI', 'Helvetica Neue',sansserif";
@@ -29,7 +27,7 @@ export const List = styled.ul`
 export const Item = styled.div`
   display: flex;
   flex-direction: column;
-  line-height: 45px;
+  line-height: 20px;
   padding-left: 10px;
 `;
 
@@ -44,3 +42,10 @@ export const Title = styled.span`
   color: ${gray1};
   margin-bottom: 5px;
 `;
+
+export const ContainerTitle = styled.div`
+font-size: 20px;
+color: ${gray1};
+padding-left:20px;
+margin-bottom: 5px;
+`

@@ -1,5 +1,5 @@
 import React from 'react'
-import RadioButton, { RadioButtonLabel, Wrapper, Item } from './styled/radioButton'
+import RadioButton, { RadioButtonLabel, Wrapper, Item, ContainerTitle } from './styled/radioButton'
 
 interface UserTypeOptions {
     options: Array<string>,
@@ -10,8 +10,9 @@ interface UserTypeOptions {
 const UserTypeOptionsAction = (props: UserTypeOptions) => {
   const { options, selectedIndex, handleSelectChange } = props
   return (<Wrapper>
+              <ContainerTitle>User Types</ContainerTitle>
           {options.map((option, index) => 
-              <Item key={index}>
+              <Item checked={selectedIndex === index} key={index}>
               <RadioButton 
                key = {index}
                className={options[index].toLocaleLowerCase()}

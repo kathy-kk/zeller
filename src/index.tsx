@@ -11,7 +11,7 @@ import { ConfigProvider } from 'react-avatar'
 ReactDOM.render(
   <ApolloProvider client={client}>
   <React.StrictMode>
-  <ConfigProvider colors={['red', 'green', 'blue']}>
+  <ConfigProvider>
     <App />
     </ConfigProvider>
   </React.StrictMode>

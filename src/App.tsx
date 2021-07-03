@@ -4,6 +4,7 @@ import { ADMIN, MANAGER } from './types/userType'
 import  UserListComponent, { User } from './components/userList'
 import { useQuery } from '@apollo/client';
 import { ListZellerCustomersQuery } from './query/query'
+import './App.css'
 
 interface ListZellerCustomers {
   items: User[]
@@ -22,7 +23,7 @@ function App() {
       setSelectedIndex(options.indexOf(event.target.value))
   }
   return (
-    <div className="App">
+    <div className='App'>
        <UserTypeOptions handleSelectChange = {handleSelectChange} selectedIndex={selectedIndex} options={options}/>
        <UserListComponent list = {data?.listZellerCustomers?.items||[]} selectedRole={options[selectedIndex]}/>
     </div>
